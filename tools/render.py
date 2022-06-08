@@ -3,7 +3,7 @@ import trimesh
 
 viewer_flags = {
     "lighting_intensity": 4.0,
-    "window_title": "NeuralRecon reconstructions",
+    "window_title": "Reconstructie 3D",
 }
 class Visualizer:
     def __init__(self):

@@ -28,7 +28,7 @@ import numpy as np
 import pyrender
 import torch
 import trimesh
-from tools.simple_loader import *
+from data.simple_loader import *
 
 from tools.evaluation_utils import eval_depth, eval_mesh
 from tools.evaluation.visualize_metrics import visualize

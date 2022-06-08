@@ -8,7 +8,7 @@ import argparse
 from tqdm import tqdm
 import ray
 import torch.multiprocessing
-from data.simple_loader import *
+from datasets.simple_loader import *
 
 torch.multiprocessing.set_sharing_strategy('file_system')
 

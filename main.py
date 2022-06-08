@@ -11,7 +11,7 @@ from tensorboardX import SummaryWriter
 from loguru import logger
 
 from utils import tensor2float, save_scalars, DictAverageMeter, SaveScene, make_nograd_func
-from data import transforms, find_dataset_def
+from datasets import transforms, find_dataset_def
 from models import NeuralRecon
 from config import cfg, update_config
 

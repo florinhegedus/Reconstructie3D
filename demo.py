@@ -9,7 +9,7 @@ from tqdm import tqdm
 from models import NeuralRecon
 from utils import SaveScene
 from config import cfg, update_config
-from datasets import find_dataset_def, transforms
+from data import find_dataset_def, transforms
 from tools.process_arkit_data import process_data
 
 

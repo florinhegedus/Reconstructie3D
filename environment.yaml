@@ -1,7 +1,5 @@
-name: neucon
+name: reconstructie3d
 channels:
-  # You can use the TUNA mirror to speed up the installation if you are in mainland China.
-  # - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
   - pytorch
   - defaults
   - conda-forge
@@ -13,7 +11,7 @@ dependencies:
   - ipython
   - tqdm
   - numba
-  - sparsehash  # dependency for torchsparse
+  - sparsehash
   - pip
   - pip:
     - -r requirements.txt

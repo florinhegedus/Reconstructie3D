@@ -1,9 +1,9 @@
 import torch
 import torch.nn as nn
 
-from .image_encoder import MnasMulti
+from .image_encoders.mnas_net import MnasMulti
 from .multilevel_reconstruct import MultilevelReconstruct
-from .gru_fusion import GRUFusion
+from .fusion.gru_fusion import GRUFusion
 from utils import tocuda
 
 

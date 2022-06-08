@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 from torchsparse.tensor import PointTensor
 from utils import sparse_to_dense_channel, sparse_to_dense_torch
-from .sparse_modules import ConvGRU
+from ..sparse_modules import ConvGRU
 
 
 class GRUFusion(nn.Module):

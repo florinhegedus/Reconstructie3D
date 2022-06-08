@@ -11,11 +11,9 @@ from tensorboardX import SummaryWriter
 from loguru import logger
 
 from utils import tensor2float, save_scalars, DictAverageMeter, SaveScene, make_nograd_func
-from datasets import transforms, find_dataset_def
+from data import transforms, find_dataset_def
 from models import NeuralRecon
 from config import cfg, update_config
-#from datasets.sampler import DistributedSampler
-from ops.comm import *
 
 
 def args():
@@ -106,9 +104,9 @@ MVSDataset = find_dataset_def(cfg.DATASET)
 train_dataset = MVSDataset(cfg.TRAIN.PATH, "train", transforms, cfg.TRAIN.N_VIEWS, len(cfg.MODEL.THRESHOLDS) - 1)
 test_dataset = MVSDataset(cfg.TEST.PATH, "test", transforms, cfg.TEST.N_VIEWS, len(cfg.MODEL.THRESHOLDS) - 1)
 
-TrainImgLoader = DataLoader(train_dataset, cfg.BATCH_SIZE, shuffle=False, num_workers=cfg.TRAIN.,
+TrainImgLoader = DataLoader(train_dataset, cfg.BATCH_SIZE, shuffle=False, num_workers=cfg.TRAIN.N_WORKERS,
                                 drop_last=True)
-TestImgLoader = DataLoader(test_dataset, cfg.BATCH_SIZE, shuffle=False, num_workers=cfg.TEST.,
+TestImgLoader = DataLoader(test_dataset, cfg.BATCH_SIZE, shuffle=False, num_workers=cfg.TEST.N_WORKERS,
                                drop_last=False)
 
 # model, optimizer

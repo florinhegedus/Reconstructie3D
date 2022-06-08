@@ -8,8 +8,8 @@ from loguru import logger
 from models.sparse_modules import SPVCNN
 from utils import apply_log_transform
 from .fusion.gru_fusion import GRUFusion
-from ops.back_project import back_project
-from ops.generate_grids import generate_grid
+from tools.ops.back_project import back_project
+from tools.ops.generate_grids import generate_grid
 
 
 class MultilevelReconstruct(nn.Module):

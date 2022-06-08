@@ -15,7 +15,7 @@ class NeuralRecon(nn.Module):
     def __init__(self, cfg):
         super(NeuralRecon, self).__init__()
         self.cfg = cfg.MODEL
-        alpha = float(self.cfg.IMAGE_ENCODER.ARC.split('-')[-1])
+        alpha = float(self.cfg.BACKBONE2D.ARC.split('-')[-1])
         # other hparams
         self.pixel_mean = torch.Tensor(cfg.MODEL.PIXEL_MEAN).view(-1, 1, 1)
         self.pixel_std = torch.Tensor(cfg.MODEL.PIXEL_STD).view(-1, 1, 1)

@@ -22,7 +22,7 @@ class MultilevelReconstruct(nn.Module):
         self.cfg = cfg
         self.n_scales = len(cfg.THRESHOLDS) - 1
 
-        alpha = int(self.cfg.IMAGE_ENCODER.ARC.split('-')[-1])
+        alpha = int(self.cfg.BACKBONE2D.ARC.split('-')[-1])
         ch_in = [80 * alpha + 1, 96 + 40 * alpha + 2 + 1, 48 + 24 * alpha + 2 + 1, 24 + 24 + 2 + 1]
         channels = [96, 48, 24]
 
